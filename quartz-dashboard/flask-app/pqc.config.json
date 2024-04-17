@@ -1,0 +1,11 @@
+{
+	"ACCESS_TOKEN": "github-personal-access-token",
+    "DB_HOST":  "docker-compose-mysql",
+    "DB_DATABASE":  "MYSQL_DATABASE",
+    "DB_USER": "MYSQL_USER",
+    "DB_PASSWORD": "MYSQL_PASSWORD",
+    "SECRET_KEY": "",
+    "RANDOM_KEY": "",
+	"SERVICE_USER":"",
+	"SERVICE_PASSWORD":"MYSQL_ROOT_PASSWORD"
+}

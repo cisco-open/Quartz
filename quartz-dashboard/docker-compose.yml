@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+    hostname: docker-compose-mysql
+    ports:
+      - "3306:3306"
+    expose:
+      - 3306
+    volumes:
+      - ./post_quantum_crypto.sql:/docker-entrypoint-initdb.d/dump.sql
+    env_file:
+      - .env
+  flask-app:
+    build: flask-app
+    command: sh -c "/wait && flask run --host=0.0.0.0"
+    depends_on:
+      - mysql
+    volumes:
+      - ./flask-app:/backend
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=app.py
+      - WAIT_HOSTS=mysql:3306
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=5
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+    ports:
+      - "5000:5000"
+      - "8000:8000"
+
+  web-app:
+    build: web-app
+    command: ["npm", "start"]
+    volumes:
+      - ./web-app:/frontend
+      - node-modules:/frontend/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "3000:9999"
+    depends_on:
+      - flask-app
+
+volumes:
+  node-modules:

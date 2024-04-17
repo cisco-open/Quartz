@@ -1,0 +1,22 @@
+{
+    "ECDHE-RSA-AES256-GCM-SHA384" : {
+        "pqc_safe" : "No",
+        "risk_factor" : "1",
+        "remediation" : "ECDHE RSA is not PQC secure."
+    },
+    "TLS_AES_256_GCM_SHA384" : {
+        "pqc_safe" : "Yes",
+        "risk_factor" : "0",
+        "remediation" : "PQC secure."
+    },
+    "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA" : {
+        "pqc_safe" : "No",
+        "risk_factor" : "1",
+        "remediation" : "ECDHE RSA is not PQC secure."
+    },
+    "TLS_RSA_WITH_AES_128_GCM_SHA256" : {
+        "pqc_safe" : "No",
+        "risk_factor" : "1",
+        "remediation" : "RSA and AES-128 are not PQC secure."
+    }
+}

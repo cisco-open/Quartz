@@ -1,0 +1,84 @@
+Server Check:
+
+1. google.com
+2. stackoverflow.com
+
+API Check:
+
+1. Host: mysql
+   Port: 3306 
+   Protocol: MySQL
+   Time: <1min
+
+Repo Check:
+
+1. https://github.com/DinoTools/pysslscan
+2. https://github.com/rbsec/sslscan
+
+Database Check:
+
+1. Target: mysql
+   Port: 3306
+   Database Type: MySQL
+
+Cloud Check:
+1. Target: https://test-bucket-key-check.s3-us-east-2.amazonaws.com
+   Resource Owner: xxxxxxxxxxx
+   Type: S3
+
+
+Cloud Application:
+1. Access Key ID: xxxxxxxxxxxxxx
+   Secret Access Key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+Terraform:
+
+provider "aws" {
+  region = "us-west-2"  # Replace with your desired AWS region
+}
+
+resource "aws_s3_bucket" "example_bucket" {
+  bucket = "your-bucket-name"  # Replace with your desired bucket name
+
+  versioning {
+    enabled = true
+  }
+}
+
+resource "aws_redshift_cluster" "example_cluster" {
+  cluster_identifier      = "your-cluster-name"  # Replace with your desired cluster name
+  node_type               = "dc2.large"
+  cluster_type            = "single-node"
+  master_username         = "your-username"  # Replace with your desired username
+  master_password         = "your-password"  # Replace with your desired password
+  publicly_accessible    = true
+  skip_final_snapshot     = true
+  encrypted               = false  # Setting encryption to false for an unencrypted cluster
+}
+
+output "s3_bucket_name" {
+  value = aws_s3_bucket.example_bucket.id
+}
+
+output "redshift_cluster_id" {
+  value = aws_redshift_cluster.example_cluster.id
+}
+
+Dockerfile:
+
+# Use the official Ubuntu base image
+FROM ubuntu:latest
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Update the package manager and install dependencies
+RUN apt-get update && \
+    apt-get install -y nano
+
+# Copy the application files into the container
+COPY . /app
+
+# Specify the command to run when the container starts
+CMD ["ls"]

@@ -1,0 +1,12 @@
+FROM node:alpine as build
+
+RUN mkdir /app
+WORKDIR /app
+COPY package.json .
+RUN npm install --force
+COPY . .
+EXPOSE 3000
+ENV PATH /app/node_modules/.bin:$PATH
+
+# start app
+CMD ["npm", "start"]

@@ -1,0 +1,10 @@
+{
+    "SCANNER_REPO":"",
+    "WEB_HOST":"http://localhost:3000",
+    "FLASK_HOST":"http://localhost:5000",
+    "REPO_URL":"",
+    "CLOUD_OWNER":"",
+    "CLOUD_URL":"",
+    "ACCESS_KEY":"",
+    "ACCESS_SECRET_KEY":""
+}

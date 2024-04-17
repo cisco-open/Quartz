@@ -1,0 +1,11 @@
+mysql-connector-python
+flask-mongoengine
+flask-cors
+sslscan
+gitpython
+urllib3==1.26.18
+xmltodict
+requests
+docker
+pexpect
+pytest

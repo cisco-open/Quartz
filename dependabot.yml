@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+  directory: "/Quartz/quartz-dashboard/flask-app"
+  target-branches:
+    - "testauto"
+  schedule:
+    interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/Quartz/quartz-dashboard/web-app"
+    target-branches:
+      - "testauto"
+    schedule:
+      interval: "daily"

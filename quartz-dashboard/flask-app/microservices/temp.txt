@@ -1,0 +1,1573 @@
+name         : xts(twofish)
+driver       : xts(ecb(twofish-generic))
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 32
+max keysize  : 64
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : ecb(twofish)
+driver       : ecb(twofish-generic)
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 0
+chunksize    : 16
+walksize     : 16
+
+name         : xts(serpent)
+driver       : xts(ecb(serpent-generic))
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 0
+max keysize  : 64
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : ecb(serpent)
+driver       : ecb(serpent-generic)
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 0
+max keysize  : 32
+ivsize       : 0
+chunksize    : 16
+walksize     : 16
+
+name         : __xts(aes)
+driver       : cryptd(__xts-aes-ce)
+module       : kernel
+priority     : 350
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : yes
+blocksize    : 16
+min keysize  : 32
+max keysize  : 64
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : cbc(twofish)
+driver       : cbc(twofish-generic)
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : cbc(serpent)
+driver       : cbc(serpent-generic)
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 0
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : __cbc(aes)
+driver       : cryptd(__cbc-aes-ce)
+module       : kernel
+priority     : 350
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : cbc(aes)
+driver       : cbc(aes-ce)
+module       : kernel
+priority     : 250
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : jitterentropy_rng
+driver       : jitterentropy_rng
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : rng
+seedsize     : 0
+
+name         : xts(aes)
+driver       : xts-aes-neonbs
+module       : kernel
+priority     : 250
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : yes
+blocksize    : 16
+min keysize  : 32
+max keysize  : 64
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : ctr(aes)
+driver       : ctr-aes-neonbs
+module       : kernel
+priority     : 250
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : yes
+blocksize    : 1
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : cbc(aes)
+driver       : cbc-aes-neonbs
+module       : kernel
+priority     : 250
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : ecb(aes)
+driver       : ecb-aes-neonbs
+module       : kernel
+priority     : 250
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 0
+chunksize    : 16
+walksize     : 16
+
+name         : __xts(aes)
+driver       : __xts-aes-neonbs
+module       : kernel
+priority     : 250
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 32
+max keysize  : 64
+ivsize       : 16
+chunksize    : 16
+walksize     : 128
+
+name         : ctr(aes)
+driver       : ctr-aes-neonbs
+module       : kernel
+priority     : 249
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 1
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 128
+
+name         : __ctr(aes)
+driver       : __ctr-aes-neonbs
+module       : kernel
+priority     : 250
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : no
+blocksize    : 1
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 128
+
+name         : __cbc(aes)
+driver       : __cbc-aes-neonbs
+module       : kernel
+priority     : 250
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 128
+
+name         : __ecb(aes)
+driver       : __ecb-aes-neonbs
+module       : kernel
+priority     : 250
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 0
+chunksize    : 16
+walksize     : 128
+
+name         : aes
+driver       : aes-arm64
+module       : kernel
+priority     : 200
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+
+name         : xchacha12
+driver       : xchacha12-neon
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 1
+min keysize  : 32
+max keysize  : 32
+ivsize       : 32
+chunksize    : 64
+walksize     : 320
+
+name         : xchacha20
+driver       : xchacha20-neon
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 1
+min keysize  : 32
+max keysize  : 32
+ivsize       : 32
+chunksize    : 64
+walksize     : 320
+
+name         : chacha20
+driver       : chacha20-neon
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 1
+min keysize  : 32
+max keysize  : 32
+ivsize       : 16
+chunksize    : 64
+walksize     : 320
+
+name         : sha384
+driver       : sha384-arm64
+module       : kernel
+priority     : 150
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 128
+digestsize   : 48
+
+name         : sha512
+driver       : sha512-arm64
+module       : kernel
+priority     : 150
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 128
+digestsize   : 64
+
+name         : sha224
+driver       : sha224-arm64-neon
+module       : kernel
+priority     : 150
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 28
+
+name         : sha256
+driver       : sha256-arm64-neon
+module       : kernel
+priority     : 150
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 32
+
+name         : sha224
+driver       : sha224-arm64
+module       : kernel
+priority     : 125
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 28
+
+name         : sha256
+driver       : sha256-arm64
+module       : kernel
+priority     : 125
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 32
+
+name         : essiv(cbc(aes),sha256)
+driver       : essiv-cbc-aes-sha256-neon
+module       : kernel
+priority     : 201
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : cts(cbc(aes))
+driver       : cts-cbc-aes-neon
+module       : kernel
+priority     : 200
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : cbcmac(aes)
+driver       : cbcmac-aes-neon
+module       : kernel
+priority     : 200
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 1
+digestsize   : 16
+
+name         : xcbc(aes)
+driver       : xcbc-aes-neon
+module       : kernel
+priority     : 200
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 16
+digestsize   : 16
+
+name         : cmac(aes)
+driver       : cmac-aes-neon
+module       : kernel
+priority     : 200
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 16
+digestsize   : 16
+
+name         : __essiv(cbc(aes),sha256)
+driver       : __essiv-cbc-aes-sha256-neon
+module       : kernel
+priority     : 201
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : __cts(cbc(aes))
+driver       : __cts-cbc-aes-neon
+module       : kernel
+priority     : 200
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 32
+
+name         : essiv(cbc(aes),sha256)
+driver       : essiv-cbc-aes-sha256-ce
+module       : kernel
+priority     : 301
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : cts(cbc(aes))
+driver       : cts-cbc-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : xts(aes)
+driver       : xts-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : yes
+blocksize    : 16
+min keysize  : 32
+max keysize  : 64
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : ctr(aes)
+driver       : ctr-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : yes
+blocksize    : 1
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : cbc(aes)
+driver       : cbc-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : ecb(aes)
+driver       : ecb-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 0
+chunksize    : 16
+walksize     : 16
+
+name         : cbcmac(aes)
+driver       : cbcmac-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 1
+digestsize   : 16
+
+name         : xcbc(aes)
+driver       : xcbc-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 16
+digestsize   : 16
+
+name         : cmac(aes)
+driver       : cmac-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 16
+digestsize   : 16
+
+name         : __essiv(cbc(aes),sha256)
+driver       : __essiv-cbc-aes-sha256-ce
+module       : kernel
+priority     : 301
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : __cts(cbc(aes))
+driver       : __cts-cbc-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 32
+
+name         : __xts(aes)
+driver       : __xts-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 32
+max keysize  : 64
+ivsize       : 16
+chunksize    : 16
+walksize     : 32
+
+name         : ctr(aes)
+driver       : ctr-aes-ce
+module       : kernel
+priority     : 299
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 1
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : __ctr(aes)
+driver       : __ctr-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : no
+blocksize    : 1
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : __cbc(aes)
+driver       : __cbc-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+chunksize    : 16
+walksize     : 16
+
+name         : __ecb(aes)
+driver       : __ecb-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : yes
+type         : skcipher
+async        : no
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 0
+chunksize    : 16
+walksize     : 16
+
+name         : ccm(aes)
+driver       : ccm-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : aead
+async        : no
+blocksize    : 1
+ivsize       : 16
+maxauthsize  : 16
+geniv        : <none>
+
+name         : aes
+driver       : aes-ce
+module       : kernel
+priority     : 250
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+
+name         : crct10dif
+driver       : crct10dif-arm64-ce
+module       : kernel
+priority     : 200
+refcnt       : 2
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 1
+digestsize   : 2
+
+name         : crct10dif
+driver       : crct10dif-arm64-neon
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 1
+digestsize   : 2
+
+name         : gcm(aes)
+driver       : gcm-aes-ce
+module       : kernel
+priority     : 300
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : aead
+async        : no
+blocksize    : 1
+ivsize       : 12
+maxauthsize  : 16
+geniv        : <none>
+
+name         : sha256
+driver       : sha256-ce
+module       : kernel
+priority     : 200
+refcnt       : 3
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 32
+
+name         : sha224
+driver       : sha224-ce
+module       : kernel
+priority     : 200
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 28
+
+name         : sha1
+driver       : sha1-ce
+module       : kernel
+priority     : 200
+refcnt       : 3
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 20
+
+name         : ghash
+driver       : ghash-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 16
+digestsize   : 16
+
+name         : stdrng
+driver       : drbg_nopr_hmac_sha512
+module       : kernel
+priority     : 207
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : rng
+seedsize     : 0
+
+name         : stdrng
+driver       : drbg_nopr_hmac_sha256
+module       : kernel
+priority     : 206
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : rng
+seedsize     : 0
+
+name         : stdrng
+driver       : drbg_nopr_hmac_sha384
+module       : kernel
+priority     : 205
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : rng
+seedsize     : 0
+
+name         : stdrng
+driver       : drbg_nopr_hmac_sha1
+module       : kernel
+priority     : 204
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : rng
+seedsize     : 0
+
+name         : stdrng
+driver       : drbg_pr_hmac_sha512
+module       : kernel
+priority     : 203
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : rng
+seedsize     : 0
+
+name         : stdrng
+driver       : drbg_pr_hmac_sha256
+module       : kernel
+priority     : 202
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : rng
+seedsize     : 0
+
+name         : stdrng
+driver       : drbg_pr_hmac_sha384
+module       : kernel
+priority     : 201
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : rng
+seedsize     : 0
+
+name         : stdrng
+driver       : drbg_pr_hmac_sha1
+module       : kernel
+priority     : 200
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : rng
+seedsize     : 0
+
+name         : stdrng
+driver       : ansi_cprng
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : rng
+seedsize     : 48
+
+name         : 842
+driver       : 842-scomp
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : scomp
+
+name         : 842
+driver       : 842-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : compression
+
+name         : lz4hc
+driver       : lz4hc-scomp
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : scomp
+
+name         : lz4hc
+driver       : lz4hc-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : compression
+
+name         : lz4
+driver       : lz4-scomp
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : scomp
+
+name         : lz4
+driver       : lz4-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : compression
+
+name         : lzo-rle
+driver       : lzo-rle-scomp
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : scomp
+
+name         : lzo-rle
+driver       : lzo-rle-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : compression
+
+name         : lzo
+driver       : lzo-scomp
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : scomp
+
+name         : lzo
+driver       : lzo-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : compression
+
+name         : crct10dif
+driver       : crct10dif-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 1
+digestsize   : 2
+
+name         : crc32
+driver       : crc32-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 1
+digestsize   : 4
+
+name         : crc32c
+driver       : crc32c-generic
+module       : kernel
+priority     : 100
+refcnt       : 4
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 1
+digestsize   : 4
+
+name         : michael_mic
+driver       : michael_mic-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 8
+digestsize   : 8
+
+name         : zlib-deflate
+driver       : zlib-deflate-scomp
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : scomp
+
+name         : deflate
+driver       : deflate-scomp
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : scomp
+
+name         : deflate
+driver       : deflate-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : compression
+
+name         : poly1305
+driver       : poly1305-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 16
+digestsize   : 16
+
+name         : xchacha12
+driver       : xchacha12-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 1
+min keysize  : 32
+max keysize  : 32
+ivsize       : 32
+chunksize    : 64
+walksize     : 64
+
+name         : xchacha20
+driver       : xchacha20-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 1
+min keysize  : 32
+max keysize  : 32
+ivsize       : 32
+chunksize    : 64
+walksize     : 64
+
+name         : chacha20
+driver       : chacha20-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 1
+min keysize  : 32
+max keysize  : 32
+ivsize       : 16
+chunksize    : 64
+walksize     : 64
+
+name         : seed
+driver       : seed-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 16
+min keysize  : 16
+max keysize  : 16
+
+name         : anubis
+driver       : anubis-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 16
+min keysize  : 16
+max keysize  : 40
+
+name         : khazad
+driver       : khazad-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 8
+min keysize  : 16
+max keysize  : 16
+
+name         : xeta
+driver       : xeta-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 8
+min keysize  : 16
+max keysize  : 16
+
+name         : xtea
+driver       : xtea-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 8
+min keysize  : 16
+max keysize  : 16
+
+name         : tea
+driver       : tea-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 8
+min keysize  : 16
+max keysize  : 16
+
+name         : ecb(arc4)
+driver       : ecb(arc4)-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 1
+min keysize  : 1
+max keysize  : 256
+ivsize       : 0
+chunksize    : 1
+walksize     : 1
+
+name         : cast6
+driver       : cast6-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+
+name         : cast5
+driver       : cast5-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 8
+min keysize  : 5
+max keysize  : 16
+
+name         : camellia
+driver       : camellia-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+
+name         : aes
+driver       : aes-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+
+name         : serpent
+driver       : serpent-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 16
+min keysize  : 0
+max keysize  : 32
+
+name         : twofish
+driver       : twofish-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+
+name         : blowfish
+driver       : blowfish-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 8
+min keysize  : 4
+max keysize  : 56
+
+name         : fcrypt
+driver       : fcrypt-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 8
+min keysize  : 8
+max keysize  : 8
+
+name         : des3_ede
+driver       : des3_ede-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 8
+min keysize  : 24
+max keysize  : 24
+
+name         : des
+driver       : des-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 8
+min keysize  : 8
+max keysize  : 8
+
+name         : wp256
+driver       : wp256-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 32
+
+name         : wp384
+driver       : wp384-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 48
+
+name         : wp512
+driver       : wp512-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 64
+
+name         : sha384
+driver       : sha384-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 128
+digestsize   : 48
+
+name         : sha512
+driver       : sha512-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 128
+digestsize   : 64
+
+name         : sha224
+driver       : sha224-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 28
+
+name         : sha256
+driver       : sha256-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 32
+
+name         : sha1
+driver       : sha1-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 20
+
+name         : rmd160
+driver       : rmd160-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 20
+
+name         : md5
+driver       : md5-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 16
+
+name         : md4
+driver       : md4-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 64
+digestsize   : 16
+
+name         : ecb(cipher_null)
+driver       : ecb-cipher_null
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : skcipher
+async        : no
+blocksize    : 1
+min keysize  : 0
+max keysize  : 0
+ivsize       : 0
+chunksize    : 1
+walksize     : 1
+
+name         : digest_null
+driver       : digest_null-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : shash
+blocksize    : 1
+digestsize   : 0
+
+name         : compress_null
+driver       : compress_null-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : compression
+
+name         : cipher_null
+driver       : cipher_null-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : cipher
+blocksize    : 1
+min keysize  : 0
+max keysize  : 0
+
+name         : rsa
+driver       : rsa-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : akcipher
+
+name         : dh
+driver       : dh-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+internal     : no
+type         : kpp
+

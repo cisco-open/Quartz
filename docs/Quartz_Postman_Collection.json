@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "639f4a48-d89a-4948-a572-14e70364304a",
+		"name": "Quartz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2087903"
+	},
+	"item": [
+		{
+			"name": "Client Scan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"scan_type\" : \"client\",\n    \"target\" : \"google.com\",\n    \"scan_target_port\" : \"443\",\n    \"scan_target_protocol\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/scanClient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"scanClient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Scan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"scan_type\" : \"server\",\n    \"target\" : \"google.com\",\n    \"scan_target_port\" : \"443\",\n    \"scan_target_protocol\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/scanServer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"scanServer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API Scan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"scan_type\" : \"server\",\n    \"target\" : \"google.com\",\n    \"scan_target_port\" : \"443\",\n    \"scan_target_protocol\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/scanServer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"scanServer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Repo Scan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"scan_type\" : \"repo\",\n    \"target\" : \"github_url\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/scanRepo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"scanRepo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FS Scan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"scan_type\" : \"fs\",\n    \"target\" : \"mysql\",\n    \"scan_target_type\" : \"ubuntu\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/scanFS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"scanFS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Database Scan - Config",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"scan_type\" : \"database\",\n    \"target\" : \"mysql\",\n    \"scan_target_port\" : \"3306\",\n    \"scan_target_type\" : \"mysql\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/scanDatabase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"scanDatabase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Database Scan - Statement",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"scan_type\" : \"statement\",\n    \"target\" : \"mysql\",\n    \"scan_target_type\" : \"mysql\",\n    \"scan_target_statement\" : \"sql_statement\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/scanDatabase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"scanDatabase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Terraform Scan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"scan_type\":\"terraform\",\n    \"target\":\"none\",\n    \"scan_target_statement\":\"provider \\\"aws\\\" {\\n  region = \\\"us-west-2\\\"  # Replace with your desired AWS region\\n}\\n\\nresource \\\"aws_s3_bucket\\\" \\\"example_bucket\\\" {\\n  bucket = \\\"your-bucket-name\\\"  # Replace with your desired bucket name\\n\\n  versioning {\\n    enabled = true\\n  }\\n}\\n\\nresource \\\"aws_redshift_cluster\\\" \\\"example_cluster\\\" {\\n  cluster_identifier      = \\\"your-cluster-name\\\"  # Replace with your desired cluster name\\n  node_type               = \\\"dc2.large\\\"\\n  cluster_type            = \\\"single-node\\\"\\n  master_username         = \\\"your-username\\\"  # Replace with your desired username\\n  master_password         = \\\"your-password\\\"  # Replace with your desired password\\n  publicly_accessible    = true\\n  skip_final_snapshot     = true\\n  encrypted               = false  # Setting encryption to false for an unencrypted cluster\\n}\\n\\noutput \\\"s3_bucket_name\\\" {\\n  value = aws_s3_bucket.example_bucket.id\\n}\\n\\noutput \\\"redshift_cluster_id\\\" {\\n  value = aws_redshift_cluster.example_cluster.id\\n}\",\n    \"scan_target_type\":\"aws\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/scanTerraform",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"scanTerraform"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cloud Storage Scan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"scan_type\": \"cloud\",\n    \"target\": \"s3-bucket-url\",\n    \"scan_target_cloud_owner\": \"cloud_owner\",\n    \"scan_target_type\": \"s3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/scanCloudStorage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"scanCloudStorage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cloud Application Scan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"scan_type\": \"cloudApplication\",\n    \"target\": \"https://aws.amazon.com/\",\n    \"scan_target_cloud_access_key_id\": \"cloud_access_key_id\",\n    \"scan_target_cloud_secret_access_key\": \"cloud_secret_access_key\",\n    \"scan_target_type\": \"aws\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/scanCloudApplication",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"scanCloudApplication"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
