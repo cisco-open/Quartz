@@ -3,7 +3,7 @@ flask-mongoengine
 flask-cors
 sslscan
 gitpython
-urllib3==1.26.18
+urllib3==1.26.19
 xmltodict
 requests
 docker
