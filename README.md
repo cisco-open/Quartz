@@ -1,6 +1,6 @@
 # Quartz
 
-Quartz stands for Quantum Risk and Threat Analyzer. The Quartz system scans remote targets and scan their cryptographic configurations to validate readiness of the system against post-quantum cryptographic recommendations.
+Quartz stands for Quantum Risk and Threat Analyzer. The Quartz is a research prototype and not a product. It scans remote targets and scan their cryptographic configurations to validate readiness of the system against post-quantum cryptographic recommendations.
 
 ## Architecture
 
